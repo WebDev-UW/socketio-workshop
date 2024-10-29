@@ -11,3 +11,4 @@ More about confetti configuration here: https://www.kirilv.com/canvas-confetti/
 Do the same as the previous challenge, with the even name `"pumpkin"` and calling `showPumpkin` on the client-side to display the pumpkin jumpscare
 
 # Challenge 3: Color Change
+When the color is changed, set the color on all clients (including yours, so use io.emit) to the new color. Code for how to get the color from the picker is provided.

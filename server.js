@@ -24,14 +24,6 @@ io.on('connection', (socket) => {
 	socket.on('chat message', (msg) => {
 		socket.broadcast.emit('chat message', msg);
 	})
-
-
-
-	// Step 6 TODO: Handle Confetti event
-
-	// Step 6 TODO: Handle Pumpkin event
-
-	// Step 7 TODO: Handle Color Change event
 });
 
 server.listen(3000, () => {
