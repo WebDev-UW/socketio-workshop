@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Socket.IO chat</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
+</head>
+
+<body>
+	<div id="pumpkin-container">
+		<p id="pumpkin-emoji">🎃</p>
+	</div>
+
+	<div id="container" class="card">
+		<div id="messages" class="card">
+
+		</div>
+		<div id="controls">
+			<div id="message-control">
+				<input id="input" autocomplete="off" placeholder="Message" />
+				<button id="send">Send</button>
+			</div>
+
+			<div id="challenge-control">
+				<button id="pumpkin" class="secondary">🎃</button>
+				<button id="confetti" class="secondary">🎉</button>
+				<input id="color" type="text" data-coloris>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+	<script src="/script.js"></script>
+	<script>
+		Coloris({
+			alpha: false,
+			themeMode: "dark"
+		});
+		var socket = io();
+
+		// Functions addMessage, showConfetti, showPumpkin, and setColor are provided for you in script.js
+
+		const input = document.getElementById('input');
+		document.getElementById('send').addEventListener('click', function (e) { // On click of send
+			showPumpkin()
+			e.preventDefault();
+			if (input.value) { // If input is not empty
+				console.log("Sending Message: ", input.value);
+
+				// Step 2 TODO: Emit the message to the server when the user submits their message
+
+				input.value = '';
+			}
+		});
+
+		// Step 4 TODO: Listen for the chatMessage event (console.log the msg for now)
+
+
+		/*
+			Challenge 3:
+			document.getElementById("color").addEventListener("change", () => {	});
+			
+			^^ fires when color is changed and color picker is closed
+		*/
+
+		
+		
+	</script>
+</body>
+
+</html>
