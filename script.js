@@ -45,7 +45,7 @@ function addMessage(msg) {
 
 function showPumpkin() {
 	document.getElementById('pumpkin-container').className = "shown"
-	setInterval(() => {
+	setTimeout(() => {
 		document.getElementById('pumpkin-container').className = ""
 	}, 2000)
 }
