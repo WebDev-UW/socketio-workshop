@@ -21,9 +21,6 @@ io.on('connection', (socket) => {
 	console.log('a user connected');
 
 	// Step 1 TODO: Handle the client sending a chat message and log the message
-	socket.on("chatMessage", (msg) => {
-		console.log("chatMessage:", msg);
-	})
 });
 
 server.listen(3000, () => {
